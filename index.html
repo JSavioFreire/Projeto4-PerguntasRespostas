@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>pergunta Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae non, quibusdam nulla delectus eum nobis qui maiores porro perspiciatis. In quia omnis excepturi repellendus. Quasi repellat dignissimos saepe ea aliquid?</h1>
+        <input type="radio" name="pergunta1" id="op" value="correta"><span>Opção 1</span>
+        <br>
+        <input type="radio" name="pergunta1" id="op" value="incorreta"><span>Opção 2</span>
+        <br>
+        <input type="radio" name="pergunta1" id="op" value="incorreta"><span>Opção 3</span>
+        <br>
+        <input type="radio" name="pergunta1" id="op" value="incorreta"><span>Opção 4</span>
+        <br>
+    </div>  
+
+    <div>
+        <h1>pergunta Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae non, quibusdam nulla delectus eum nobis qui maiores porro perspiciatis. In quia omnis excepturi repellendus. Quasi repellat dignissimos saepe ea aliquid?</h1>
+        <input type="radio" name="pergunta2" id="op" value="incorreta"><span>Opção 1</span>
+        <br>
+        <input type="radio" name="pergunta2" id="op" value="incorreta"><span>Opção 2</span>
+        <br>
+        <input type="radio" name="pergunta2" id="op" value="correta"><span>Opção 3</span>
+        <br>
+        <input type="radio" name="pergunta2" id="op" value="incorreta"><span>Opção 4</span>
+        <br>
+    </div>
+    <div>
+        <h1>pergunta Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae non, quibusdam nulla delectus eum nobis qui maiores porro perspiciatis. In quia omnis excepturi repellendus. Quasi repellat dignissimos saepe ea aliquid?</h1>
+        <input type="radio" name="pergunta3" id="op" value="incorreta"><span>Opção 1</span>
+        <br>
+        <input type="radio" name="pergunta3" id="op" value="incorreta"><span>Opção 2</span>
+        <br>
+        <input type="radio" name="pergunta3" id="op" value="correta"><span>Opção 3</span>
+        <br>
+        <input type="radio" name="pergunta3" id="op" value="incorreta"><span>Opção 4</span>
+        <br>
+    </div>
+    <div>
+        <h1>pergunta Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae non, quibusdam nulla delectus eum nobis qui maiores porro perspiciatis. In quia omnis excepturi repellendus. Quasi repellat dignissimos saepe ea aliquid?</h1>
+        <input type="radio" name="pergunta4" id="op" value="incorreta"><span>Opção 1</span>
+        <br>
+        <input type="radio" name="pergunta4" id="op" value="incorreta"><span>Opção 2</span>
+        <br>
+        <input type="radio" name="pergunta4" id="op" value="correta"><span>Opção 3</span>
+        <br>
+        <input type="radio" name="pergunta4" id="op" value="incorreta"><span>Opção 4</span>
+        <br>
+    </div>
+
+    <button style="margin: 50px 0 ;">Corrigir</button>
+    <script>
+        const respostas = document.querySelectorAll('div input');
+        const bt = document.querySelector('button');
+
+        pergunta = [];
+        let corretas = 0;
+        let incorretas = 0;
+              
+        respostas.forEach((el,index) => {
+
+            respostas[index].addEventListener('change',()=>{
+                if(respostas[index].value == 'correta'){
+                console.log('certa');
+                pergunta.push('Correto'); 
+                corretas++
+                }
+                else if(respostas[index].value == 'incorreta'){
+                console.log('errada')
+                pergunta.push('incorreto');
+                incorretas++
+                }  
+
+            })
+        });  
+        
+        bt.addEventListener('click',()=>{
+            console.log(corretas)
+            console.log(incorretas)
+            
+        })
+        
+
+    </script>
+</body>
+</html>
